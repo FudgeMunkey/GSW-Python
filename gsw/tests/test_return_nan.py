@@ -40,7 +40,7 @@ in_situ_seawater_density_rho_st = st.floats(
 longitude_st = st.floats(
     min_value=-360, max_value=360, allow_nan=False
 )  # Documentation
-latitude_st = st.floats(min_value=-90, max_value=90, allow_nan=False)  # Documentation
+latitude_st = st.floats(min_value=-86, max_value=90, allow_nan=False)  # Documentation
 
 
 def check_value_exists(value):
