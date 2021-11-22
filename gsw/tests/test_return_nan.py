@@ -4,7 +4,7 @@ from hypothesis import given, example, strategies as st
 # STRATEGIES
 
 # Salinity
-global_salinity_st = st.floats(min_value=0.1, max_value=42, allow_nan=False)
+global_salinity_st = st.floats(min_value=0, max_value=42, allow_nan=False)
 absolute_salinity_st = global_salinity_st  # Paper [0, 42]
 practical_salinity_st = global_salinity_st  # Paper [0, 42]
 knudsen_salinity_st = global_salinity_st  # Guess
@@ -24,11 +24,11 @@ in_situ_temperature_of_sea_ice_at_pressure_st = (
 )
 
 # Pressure
-global_pressure_st = st.floats(min_value=0.1, max_value=11000, allow_nan=False)
+global_pressure_st = st.floats(min_value=0, max_value=11000, allow_nan=False)
 sea_pressure_st = global_pressure_st  # Paper [0, 11000]
 
 # Fractions
-global_fractions_st = st.floats(min_value=0.1, max_value=1, allow_nan=False)
+global_fractions_st = st.floats(min_value=0, max_value=1, allow_nan=False)
 saturation_fraction_st = global_fractions_st  # Documentation [0, 1]
 mass_fraction_of_ice_st = global_fractions_st  # Documentation [0, 1]
 mass_fraction_of_sea_ice_st = global_fractions_st  # Documentation [0, 1]
